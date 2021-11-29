@@ -11,7 +11,7 @@ public class FirstController {
 
     @GetMapping
     public ResponseEntity init() {
-        return ResponseEntity.ok("First Controller is working...");
+        return ResponseEntity.ok("First Controller ready to work!");
     }
 
     @GetMapping("/hello")
