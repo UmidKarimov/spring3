@@ -1,4 +1,4 @@
-package az.spring3.spring;
+package az.spring3.spring.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String init (){
-        return "hello.html";
+        return "hello/hello";
     }
 }
