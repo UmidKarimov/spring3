@@ -14,7 +14,7 @@ public class CalculatorService {
             case "multiple":
                 result= a * b;
             break;
-            case "devide":
+            case "division":
                 result= (double) a / (double) b;
             break;
             default:
