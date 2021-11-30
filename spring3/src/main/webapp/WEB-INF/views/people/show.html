@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="ISO-8859-1">
-    <title>My app second controller</title>
+    <title>Person</title>
 </head>
 
 <body>
 
-<p>Exit</p>
-<a href="/second">Say goodbye</a> or
-<a href="/calc">Go Calculator</a>
+<p th:text="${person.getName()}"> VALUE NAME</p>
+<p th:text="${person.getId()}"> VALUE ID</p>
+
 </body>
 
 </html>
