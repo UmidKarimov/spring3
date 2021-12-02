@@ -25,7 +25,6 @@ public class CalculatorController {
     @GetMapping("/operation")
     public String calc(@RequestParam("a") int a, @RequestParam("b") int b, @RequestParam("action") String action, Model model) {
 
-        System.out.println(CalculatorService.calculate(a,b,action));
         model.addAttribute("result", CalculatorService.calculate(a, b, action));
         return "calculator/calc";
     }

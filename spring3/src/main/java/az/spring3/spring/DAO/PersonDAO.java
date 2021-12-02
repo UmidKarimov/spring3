@@ -14,18 +14,23 @@ public class PersonDAO {
 
     {
         people = new ArrayList<>();
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_"+PEOPLE_ID_SEQUENCE));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_"+PEOPLE_ID_SEQUENCE));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_"+PEOPLE_ID_SEQUENCE));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_"+PEOPLE_ID_SEQUENCE));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_"+PEOPLE_ID_SEQUENCE));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
     }
 
     public List<Person> index() {
         return people;
     }
 
-    public Person showById (int id){
-        return people.stream().filter(pers -> pers.getId()==id).findAny().orElse(null);
+    public Person showById(int id) {
+        return people.stream().filter(pers -> pers.getId() == id).findAny().orElse(null);
+    }
+
+    public void save(Person person){
+        person.setId(++PEOPLE_ID_SEQUENCE);
+        people.add(person);
     }
 }
