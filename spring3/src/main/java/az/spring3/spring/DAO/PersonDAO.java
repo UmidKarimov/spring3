@@ -14,11 +14,11 @@ public class PersonDAO {
 
     {
         people = new ArrayList<>();
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
-        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20, "tes@mail"));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20, "tes@mail"));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20, "tes@mail"));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20, "tes@mail"));
+        people.add(new Person(++PEOPLE_ID_SEQUENCE, "Person_" + PEOPLE_ID_SEQUENCE, 20, "tes@mail"));
     }
 
     public List<Person> index() {
@@ -38,6 +38,7 @@ public class PersonDAO {
         Person oldPerson = showById(id);
         oldPerson.setName(person.getName());
         oldPerson.setAge(person.getAge());
+        oldPerson.setEmail(person.getEmail());
     }
 
     public void delete(int id){
